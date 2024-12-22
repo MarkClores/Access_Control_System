@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/images/background2.png') no-repeat bottom center;
+    background-size: cover;
+    background-color: #f8f9fa;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #000000d5;
+}
+
+.btn-primary {
+    background-color: #66B032; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4D8228; 
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #000000;
+}
+
+input.form-control {
+    border-color: #66B032; 
+}
+
+input.form-control:focus {
+    border-color: #4D8228; 
+    box-shadow: 0 0 5px rgba(102, 176, 50, 0.5); 
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.full-width {
+    grid-column: span 3;
+}
+
+a {
+    color: #FF6F00; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E65500; 
+}
+
+/* Password Container */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#toggle-password, #toggle-retype-password {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    position: absolute;
+    right: 10px; /* Positions the toggle button to the right of the password input */
+}
+
+#toggle-password:hover, #toggle-retype-password:hover {
+    text-decoration: underline;
+}

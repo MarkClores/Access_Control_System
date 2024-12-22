@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/images/background.png') no-repeat bottom center;
+    background-size: cover;
+    background-color: #f8f9fa;
+}
+
+.login-container {
+    display: flex;  
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    z-index: 1; 
+    position: relative;
+}
+
+.welcome-section {
+    background: linear-gradient(to bottom right, #6A0DAD, #007BFF);
+    color: #fff;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+}
+
+.form-section {
+    padding: 40px;
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: #8a2be2;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #6A0DAD;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* Password Container */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#toggle-password {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    position: absolute;
+    right: 10px; /* Positions the toggle button to the right of the password input */
+}
+
+#toggle-password:hover {
+    text-decoration: underline;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 480px) {
+    .form-section {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

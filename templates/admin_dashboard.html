@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='admin_dash_styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Welcome, Admin</h2>
+
+        <div class="mt-3 d-flex justify-content-between align-items-center">
+            <a href="/add_user" class="btn btn-success mb-3">Add User</a>
+        
+            <!-- Filter by Role (Admin/User) -->
+            <div class="btn-group">
+                <a href="{{ url_for('admin_dashboard', role='admin') }}" class="btn btn-primary">Admins</a>
+                <a href="{{ url_for('admin_dashboard', role='user') }}" class="btn btn-secondary">Users</a>
+                <a href="{{ url_for('admin_dashboard') }}" class="btn btn-info">All Users</a>
+            </div>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Address</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for idx, user in enumerate(users, 1) %}
+                    <tr>
+                        <td>{{ idx }}</td>
+                        <td>{{ user.first_name }}</td>
+                        <td>{{ user.middle_name }}</td>
+                        <td>{{ user.last_name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.contact_number }}</td>
+                        <td>{{ user.address }}</td>
+                        <td class="d-flex justify-content-between">
+                            <span>{{ user.role }}</span>
+                            <div class="d-flex">
+                                <a href="{{ url_for('edit_user', user_id=user.id) }}" class="btn btn-warning btn-edit ml-2">Edit</a>
+                                <a href="{{ url_for('delete_user', user_id=user.id) }}" class="btn btn-danger btn-sm ml-2">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>                     
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/images/admin_register_bg.png') no-repeat center center;
+    background-size: cover;
+    background-color: #f0f4c3;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4A4A4A;
+}
+
+.btn-primary {
+    background-color: #4682B4; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4169E1; 
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333333;
+}
+
+input.form-control {
+    border-color: #4682B4; 
+}
+
+input.form-control:focus {
+    border-color: #4169E1; 
+    box-shadow: 0 0 5px rgba(70, 130, 180, 0.5); 
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.full-width {
+    grid-column: span 3;
+}
+
+a {
+    color: #4682B4; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4169E1; 
+}

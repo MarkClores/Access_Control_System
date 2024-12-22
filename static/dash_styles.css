@@ -1,0 +1,145 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/images/background3.png') no-repeat center center;
+    background-size: cover;
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+}
+
+h2 {
+    color: #556B2F;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Profile Header Styling */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Profile Picture Styling */
+.profile-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Table Styling */
+.table {
+    margin-top: 20px;
+    background-color: #FAFAD2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #8B4513;
+    color: white;
+    padding: 12px;
+}
+
+.table td {
+    background-color: #FFF8DC;
+    padding: 12px;
+    color: #333333;
+}
+
+/* Edit Button Styling */
+.btn-group {
+    margin-left: auto;
+}
+
+.btn-warning {
+    background-color: #DAA520;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.btn-warning:hover {
+    background-color: #CD853F;
+}
+
+/* Logout Button Styling */
+.btn-danger {
+    background-color: #8B0000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn-danger:hover {
+    background-color: #A52A2A;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-warning {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .btn-danger {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%; 
+        border: 3px solid #f8f9fa;
+    }
+    
+}
